@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 public class MmykDiscoveryApplication {
 
     public static void main(String[] args) {
-        System.out.println("hellok");
+        System.out.println("hellokid");
         SpringApplication.run(MmykDiscoveryApplication.class, args);
     }
 
