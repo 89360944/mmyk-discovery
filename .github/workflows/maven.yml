@@ -59,4 +59,4 @@ jobs:
           # 拉取最新latest版本镜像
           docker pull springcloudeureka
           # 运行最新latest版本镜像
-          docker run -d -p 8080:8080 springcloudeureka
+          docker run -d -p 8761:8761 springcloudeureka
