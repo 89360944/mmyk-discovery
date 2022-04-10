@@ -1,14 +1,14 @@
 spring:
   application:
     name: discovery
-#server:
-#  port: 8080
+server:
+  port: 8761
 eureka:
   instance:
-    hostname: localhost
+    hostname: nmb
     ip-address: 182.254.192.61
   client:
     registerWithEureka: false
     fetchRegistry: false
-#    serviceUrl:
-#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
