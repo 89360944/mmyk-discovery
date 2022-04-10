@@ -51,12 +51,12 @@ jobs:
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
           # 停止旧版容器
-          docker stop $(docker ps --filter ancestor=springcloudeureka -q)
+          docker stop $(docker ps --filter ancestor=jzdphz/springcloudeureka -q)
           # 删除旧版容器
-          docker rm -f $(docker ps -a --filter ancestor=springcloudeureka -q)
+          docker rm -f $(docker ps -a --filter ancestor=jzdphz/springcloudeureka -q)
           # 删除旧版镜像
-          docker rmi -f $(docker images springcloudeureka -q)
+          docker rmi -f $(docker images jzdphz/springcloudeureka -q)
           # 拉取最新latest版本镜像
-          docker pull springcloudeureka
+          docker pull jzdphz/springcloudeureka
           # 运行最新latest版本镜像
-          docker run -d -p 8761:8761 springcloudeureka
+          docker run -d -p 8761:8761 jzdphz/springcloudeureka
