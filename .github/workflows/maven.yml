@@ -28,8 +28,8 @@ jobs:
     - name: Login to Docker Hub
       uses: docker/login-action@v1
       with:
-        username: ${{ secrets.DOCKER_HUB_USERNAME }}
-        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+        username: jzdphz
+        password: 20180306_Meng
     - name: Set up Docker Buildx
       id: buildx
       uses: docker/setup-buildx-action@v1
@@ -41,7 +41,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/springcloudeureka
+        tags: jzdphz/springcloudeureka
     # push后，用ssh连接服务器执行脚本
     - name: SSH
       uses: appleboy/ssh-action@master
