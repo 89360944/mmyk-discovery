@@ -5,10 +5,10 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: nmba
-#    ip-address: 182.254.192.61
+    hostname: discovery-eureka
+    ip-address: 182.254.192.61
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.ip-address}:${server.port}/eureka/
