@@ -6,8 +6,8 @@ server:
 eureka:
   instance:
     hostname: discovery-eureka
-    ip-address: 172.17.0.3
-    prefer-ip-address: true
+    ip-address: 182.254.192.61
+#    prefer-ip-address: true
   client:
     registerWithEureka: false
     fetchRegistry: false
